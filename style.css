@@ -1,6 +1,9 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e6f7ff; /* Light blue background to represent the sky */
+    margin:0;
+    overflow: hidden;
+
+    /* font-family: 'Arial', sans-serif;
+    background-color: #e6f7ff; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,16 +13,52 @@ body {
     background-image: url('Media/Clear_blue_background.avif');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+}
+
+.background-video {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #weather-container {
-    background-color: white;
+    background-color: transparent;
+    background-image: url('./Media/input_backdrop.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    width: 40%; /* Set the width of the container */
-    text-align: center;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 40vh;
+    position:absolute;
+    bottom: 0;
+    z-index: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#zip-input {
+    width: 80%
+    padding 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255 , 255, 255, 0.8);
 }
 
 #weather-info {
